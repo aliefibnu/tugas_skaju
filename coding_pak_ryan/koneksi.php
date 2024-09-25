@@ -3,9 +3,9 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$db = "db_sekolah";
-$koneksi = mysqli_connect($host, $username, $password, $db) or die("koneksi gagal");
-$database = mysqli_select_db($koneksi, $db);
+$nama_database = "db_sekolah";
+$koneksi = mysqli_connect($host, $username, $password, $nama_database) or die("koneksi gagal");
+$database = mysqli_select_db($koneksi, $nama_database);
 
 if ($koneksi) {
   echo ('koneksi berhasil');
