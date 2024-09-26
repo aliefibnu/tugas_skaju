@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Travel To Mosquitoes Bay</title>
+    <style>
+      body {
+        background-image: url(./img/bg.webp);
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      header {
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #8887debc;
+        align-items: center;
+        position: sticky;
+        top: 20px;
+        margin-bottom: 40px;
+        opacity: .2;
+        scale: 70%;
+        transition: linear .3s;
+      }
+      header:hover{
+        opacity: 1;
+        scale: 100%;
+      }
+      header .left,
+      header .right {
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: row;
+        width: 50vw;
+      }
+      .imgTop {
+        width: 300px;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .left h1 a,
+      .right h3 a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: linear 0.3s;
+        border-radius: 10px;
+      }
+      .left h1 a:hover,
+      .right h3 a:hover {
+        background-color: #deb887;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="left">
+        <h1><a href="#header">Mosquitoes Bay</a></h1>
+      </div>
+      <div class="right">
+        <h3><a href="#wrapperImg">Foto</a></h3>
+        <h3><a href="#desc">Deskripsi</a></h3>
+        <h3><a href="#information">Informasi</a></h3>
+        <h3><a href="#selengkapnya">Selengkapnya</a></h3>
+      </div>
+    </header>
+    <main>
+      <!-- ? Untuk gambar -->
+      <div class="wrapper img" id="wrapperImg">
+        <div class="big imgTop"></div>
+        <div class="wrapperSmall">
+          <div class="small imgTop"></div>
+          <div class="small imgTop"></div>
+        </div>
+      </div>
+    </main>
+    <footer>&copy; Alief Ibnu</footer>
+    <script>
+      let wrapperImg = document.getElementById("wrapperImg");
+      let rand = 0;
+      let el = [
+        wrapperImg.getElementsByClassName("big")[0],
+        wrapperImg.getElementsByClassName("small")[0],
+        wrapperImg.getElementsByClassName("small")[1],
+      ];
+      el.forEach((element) => {
+        rand = Math.round(Math.random() * 4);
+        element.style.backgroundImage = `url(img/${rand}.webp)`;
+      });
+    </script>
+  </body>
+</html>
