@@ -36,7 +36,7 @@ let isDown = false;
 let startX, scrollLeft;
 
 slider.addEventListener("mousedown", (e) => {
-  e.preventDefault()
+  e.preventDefault();
   isDown = true;
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
@@ -61,4 +61,17 @@ slider.addEventListener("mousemove", (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
+// ! Animasi element memiliki transisi masuk dan keluar saat terlihat di layar
+const elements = document.querySelectorAll(".animate");
+document.addEventListener("scroll", () => {
+  elements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
 
+    if (isVisible) {
+      element.classList.add("animate-in");
+    } else {
+      element.classList.remove("animate-in");
+    }
+  });
+});

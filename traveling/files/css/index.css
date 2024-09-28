@@ -54,6 +54,19 @@ body {
   color: #bfc3c8;
 }
 
+.animate-in {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* ! Header Css Rule */
 header {
   opacity: 0.5;
