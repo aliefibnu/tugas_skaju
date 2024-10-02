@@ -1,4 +1,8 @@
 /* ! Global Css Rule */
+:root {
+  --background-color: #162237;
+  --text-color: #bfc3c8;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -50,8 +54,8 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background-color: #162237;
-  color: #bfc3c8;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .animate-in {

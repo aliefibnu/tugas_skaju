@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cek Tiket Pesawat</title>
+    <script src="./files/fontawesome-free-6.6.0-web/js/all.min.js"></script>
+    <link rel="stylesheet" href="./files/css/tiket_pesawat.css" />
+    <script src="./files/js/function.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <h1 id="headerText">Lihat Maskapai Tersedia</h1>
+      </header>
+    </div>
+    <nav class="sideNav">
+      <div class="topNav">
+        <i class="fas fa-plane"></i>
+        <h2>Hello, Traveler's !</h2>
+      </div>
+      <div class="bottomNav" id="navigation">
+        <p class="nav1 nav" id="maskapai">
+          <i class="fa-solid fa-plane"></i> Lihat Maskapai
+        </p>
+        <p class="nav2 nav" id="harga">
+          <i class="fa-solid fa-money-check-dollar"></i> Harga Tiket
+        </p>
+        <p class="nav4 nav" id="beli">
+          <i class="fa-solid fa-cart-shopping"></i> Beli Tiket
+        </p>
+        <p class="nav3 nav" id="durasi">
+          <i class="fa-regular fa-clock"></i> Durasi Penerbangan
+        </p>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="wrapperTable">
+        <div class="cTable1 cTable maskapai" id="maskapai">
+          <table cellspacing="0" cellpadding="20" border="2">
+            <tr>
+              <th class="sticky">Maskapai</th>
+              <th class="sticky">Kelas Tempat Duduk</th>
+
+              <th
+                rowspan="6"
+                class="panorama"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/etihad.webp);
+                "
+              ></th>
+            </tr>
+            <tr>
+              <td rowspan="4">Etihad Airways</td>
+              <td>Regular Economy Class</td>
+            </tr>
+            <tr>
+              <td>Business Class</td>
+            </tr>
+            <tr>
+              <td>First Class</td>
+            </tr>
+            <tr>
+              <td>The Residence</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                Nikmati perjalanan mewah via Abu Dhabi. Etihad menawarkan kabin
+                eksklusif dengan kursi yang dapat diubah menjadi tempat tidur,
+                serta layanan personal premium.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3">Qatar Airways</td>
+              <td>Regular Economy Class</td>
+              <td
+                class="panorama"
+                rowspan="4"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/qatar_air.webp);
+                "
+              ></td>
+            </tr>
+            <tr>
+              <td>Business Class</td>
+            </tr>
+            <tr>
+              <td>First Class</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                Penerbangan mewah melalui Doha. Dikenal dengan fasilitas hiburan
+                yang lengkap dan kursi yang dapat diubah menjadi tempat tidur di
+                kelas bisnis dan first class.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="4">Singapore Airlines</td>
+              <td>Regular Economy Class</td>
+              <td
+                class="panorama"
+                rowspan="5"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/singapore_air.webp);
+                "
+              ></td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+            </tr>
+            <tr>
+              <td>Business Class</td>
+            </tr>
+            <tr>
+              <td>First Class</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                Nikmati kenyamanan penerbangan kelas dunia dengan pelayanan
+                terbaik dari awak kabin. Transit melalui Singapura dengan
+                fasilitas lounge mewah untuk penumpang premium.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">Turkish Airlines</td>
+              <td>Regular Economy Class</td>
+              <td
+                class="panorama"
+                rowspan="3"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/turkish_air.webp);
+                "
+              ></td>
+            </tr>
+            <tr>
+              <td>Business Class</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                Melalui Istanbul, Turkish Airlines menawarkan pengalaman kuliner
+                terbaik di udara dan kursi luas di kelas bisnis.
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="cTable2 cTable harga" id="harga">
+          <table cellspacing="0" cellpadding="20" border="2">
+            <tr>
+              <th colspan="3" class="sticky">Daftar Harga</th>
+            </tr>
+            <tr>
+              <td
+                class="panorama"
+                rowspan="3"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/etihad.webp);
+                "
+              ></td>
+              <td>Nama Maskapai</td>
+              <td>Etihad Airways</td>
+            </tr>
+            <tr>
+              <td>Harga</td>
+              <td class="teksHarga" data-maskapai="etihad"></td>
+            </tr>
+            <tr>
+              <td>Rute Penerbangan</td>
+              <td>
+                <ul>
+                  <li>Jakarta (CGK)</li>
+                  <li>Abu Dhabi (AUH)</li>
+                  <li>New York (JFK)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="panorama"
+                rowspan="3"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/qatar_air.webp);
+                "
+              ></td>
+              <td>Nama Maskapai</td>
+              <td>Qatar Airways</td>
+            </tr>
+            <tr>
+              <td>Harga</td>
+              <td class="teksHarga" data-maskapai="qatar_air"></td>
+            </tr>
+            <tr>
+              <td>Rute Penerbangan</td>
+              <td>
+                <ul>
+                  <li>Jakarta (CGK)</li>
+                  <li>Doha (DOH)</li>
+                  <li>New York (JFK)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="panorama"
+                rowspan="3"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/singapore_air.webp);
+                "
+              ></td>
+              <td>Nama Maskapai</td>
+              <td>Singapore Airlines</td>
+            </tr>
+            <tr>
+              <td>Harga</td>
+              <td class="teksHarga" data-maskapai="singapore_air"></td>
+            </tr>
+            <tr>
+              <td>Rute Penerbangan</td>
+              <td>
+                <ul>
+                  <li>Jakarta (CGK)</li>
+                  <li>Singapura (SIN)</li>
+                  <li>New York (JFK)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="panorama"
+                rowspan="3"
+                style="
+                  background-image: url(./files/img/tiket_pesawat/turkish_air.webp);
+                "
+              ></td>
+              <td>Nama Maskapai</td>
+              <td>Turkish Airlines</td>
+            </tr>
+            <tr>
+              <td>Harga</td>
+              <td class="teksHarga" data-maskapai="turkish_air"></td>
+            </tr>
+            <tr>
+              <td>Rute Penerbangan</td>
+              <td>
+                <ul>
+                  <li>Jakarta (CGK)</li>
+                  <li>Istanbul (IST)</li>
+                  <li>New York (JFK)</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="cTable3 cTable beli" id="beli">
+          <table cellspacing="0" cellpadding="20" border="2">
+            <tr>
+              <th class="sticky">No</th>
+              <th class="sticky">Nama Maskapai</th>
+              <th colspan="2" class="sticky">Aksi</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Etihad Airways</td>
+              <td>
+                <a href="#lihatDetail" onclick="showTable('maskapai')"
+                  >Lihat Detail</a
+                >
+              </td>
+              <td><a href="#beliTiket">Beli Tiket</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Qatar Airways</td>
+              <td>
+                <a href="#lihatDetail" onclick="showTable('maskapai')"
+                  >Lihat Detail</a
+                >
+              </td>
+              <td><a href="#beliTiket">Beli Tiket</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Singapore Airlines</td>
+              <td>
+                <a href="#lihatDetail" onclick="showTable('maskapai')"
+                  >Lihat Detail</a
+                >
+              </td>
+              <td><a href="#beliTiket">Beli Tiket</a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Turkish Airlines</td>
+              <td>
+                <a href="#lihatDetail" onclick="showTable('maskapai')"
+                  >Lihat Detail</a
+                >
+              </td>
+              <td><a href="#beliTiket">Beli Tiket</a></td>
+            </tr>
+          </table>
+        </div>
+        <div class="cTable4 cTable durasi" id="durasi">
+          <table cellspacing="0" cellpadding="20" border="2">
+            <tr>
+              <th class="sticky" rowspan="2">No</th>
+              <th class="sticky" rowspan="2">Nama Maskapai</th>
+              <th class="sticky" colspan="2">Durasi Penerbangan</th>
+            </tr>
+            <tr>
+              <th class="sticky">Paling Cepat</th>
+              <th class="sticky">Kisaran Normal</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Etihad Airways</td>
+              <td>22h 10m</td>
+              <td>23h 15m</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Qatar Airways</td>
+              <td>23h 15m</td>
+              <td>24h 00m</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Singapore Airlines</td>
+              <td>22h 55m</td>
+              <td>23h 15m</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Turkish Airlines</td>
+              <td>24h 28m</td>
+              <td>25h 00m</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="./files/js/tiket_pesawat.js"></script>
+  </body>
+</html>
