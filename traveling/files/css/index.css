@@ -131,7 +131,7 @@ video.bg_home {
 .mediaImgSelengkapnya {
   height: 60vh;
   width: 40vw;
-  background: url(../img/bg.png);
+  background: url(../img/index/bg.png);
   background-size: cover;
   background-position: center;
 }

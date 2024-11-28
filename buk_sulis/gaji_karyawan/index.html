@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hitung Gaji Karyawan</title>
+    <style>
+      body {
+        width: 100vw;
+        overflow-x: hidden;
+        padding: 20px 0 20px 0;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #373b55;
+      }
+      form,
+      .hasil {
+        width: 500px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #aae6f5b9;
+        box-shadow: 15px 15px 30px rgb(22, 70, 83);
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
+      form section {
+        display: flex;
+        flex-direction: column;
+      }
+      section:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      section label {
+        margin-bottom: 2px;
+      }
+      button {
+        width: 100%;
+        padding: 7px;
+        font-weight: bolder;
+      }
+      input,
+      label,
+      button,
+      select {
+        cursor: pointer;
+      }
+      .hasil section {
+        display: flex;
+        flex-direction: row;
+        height: 1.3em;
+      }
+      .hasil section p:first-child {
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <section>
+        <label for="nip"> Masukkan Nip Pegawai : </label>
+        <input type="number" id="nip" placeholder="cth. 1234567890" />
+      </section>
+      <section>
+        <label for="nama_pegawai"> Masukkan Nama Pegawai : </label>
+        <input type="text" id="nama_pegawai" placeholder="cth. Budi Santoso" />
+      </section>
+      <section>
+        <label for="jabatan"> Masukkan Jabatan : </label>
+        <input type="text" id="jabatan" placeholder="cth. Kepala Bagian" />
+      </section>
+      <section>
+        <label for="gaji_pokok"> Masukkan Gaji Pokok : </label>
+        <input type="text" id="gaji_pokok" placeholder="cth. 5000000" />
+      </section>
+      <section>
+        <label for="status"> Pilih Status Pernikahan : </label>
+        <select id="status">
+          <option value="Single">Single</option>
+          <option value="Menikah">Menikah</option>
+        </select>
+      </section>
+      <button type="submit">Hitung Gaji</button>
+    </form>
+    <div class="hasil">
+      <section>
+        <p>Nip :</p>
+        <p id="hasil_nip"></p>
+      </section>
+      <section>
+        <p>Nama Pegawai :</p>
+        <p id="hasil_nama_pegawai"></p>
+      </section>
+      <section>
+        <p>Jabatan :</p>
+        <p id="hasil_jabatan"></p>
+      </section>
+      <section>
+        <p>Gaji Pokok :</p>
+        <p id="hasil_gaji_pokok"></p>
+      </section>
+      <section>
+        <p>Status Perkawinan :</p>
+        <p id="hasil_status"></p>
+      </section>
+      <section>
+        <p>Tunjangan Istri :</p>
+        <p id="hasil_tunjangan_istri"></p>
+      </section>
+      <section>
+        <p>Gaji Total :</p>
+        <p id="hasil_gaji_total"></p>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
