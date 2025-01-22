@@ -6,6 +6,7 @@ let hasil_gaji_pokok = document.getElementById("hasil_gaji_pokok");
 let hasil_status = document.getElementById("hasil_status");
 let hasil_tunjangan_istri = document.getElementById("hasil_tunjangan_istri");
 let hasil_gaji_akhir = document.getElementById("hasil_gaji_total");
+let hasil_pph = document.getElementById("hasil_pph");
 
 //? Kalau User Submit Form
 document.getElementById("form").addEventListener("submit", (e) => {
@@ -20,10 +21,11 @@ document.getElementById("form").addEventListener("submit", (e) => {
   );
   gaji_pokok = gaji_pokok == NaN ? 0 : gaji_pokok;
   let status_pegawai = document.getElementById("status").value;
+  let pph = gaji_pokok * 0.05;
 
   //? Olah Data
   let tunjangan_istri = status_pegawai == "Menikah" ? gaji_pokok / 10 : 0;
-  let gaji_akhir = gaji_pokok + tunjangan_istri;
+  let gaji_akhir = gaji_pokok + tunjangan_istri - pph;
 
   //? Tampilkan Data
   hasil_nip.textContent = nip;
@@ -32,5 +34,6 @@ document.getElementById("form").addEventListener("submit", (e) => {
   hasil_gaji_pokok.textContent = gaji_pokok.toLocaleString("id-ID");
   hasil_status.textContent = status_pegawai;
   hasil_tunjangan_istri.textContent = tunjangan_istri.toLocaleString("id-ID");
+  hasil_pph.textContent = pph.toLocaleString("id-ID");
   hasil_gaji_akhir.textContent = gaji_akhir.toLocaleString("id-ID");
 });
